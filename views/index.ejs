@@ -1,0 +1,17 @@
+<%- include('partials/head') %> 
+
+<body>
+
+    <%- include ('partials/navbar') %> 
+<% for( let d of data ) { %>
+    <li><%= d.name %> </li>
+<% } %>
+
+
+
+
+
+
+<script src="/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
