@@ -8,10 +8,16 @@ color: black;
 }
 
 #navbar{
-    padding: 10px 0px;
+    padding: 12px 0px;
+
 }
 
 #mainTable{
-    padding:100px;
+    padding: 0 90px;
+}
+
+#mainTable tr{
+    border: 1px solid white;
+    border-radius: 30%;
 }
 
