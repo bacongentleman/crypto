@@ -4,20 +4,47 @@
 
 a {
 text-decoration: none;
+
 color: black;
+}
+
+a:hover{
+    color: rgb(38, 81, 124);
+    transition: all .1s;
 }
 
 #navbar{
     padding: 12px 0px;
+    font-family: 'roboto', sans-serif, serif;
+}
 
+#tableHeaderHome{
+    color: white;
+    background-color: black;
+    
 }
 
 #mainTable{
-    padding: 0 90px;
+
+    padding: 80px 10%;
+    font-family: 'roboto', sans-serif;
 }
 
-#mainTable tr{
-    border: 1px solid white;
-    border-radius: 30%;
+#coinName{
+    font-family: 'Playfair Display', serif;
 }
 
+
+
+.coinRowHome{
+
+}
+
+
+#mainTable td{
+padding:  15px 20px;
+}
+
+#mainTable th{
+    padding:  15px 20px;
+}

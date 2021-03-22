@@ -1,5 +1,6 @@
 const price = document.querySelectorAll('.price');
 const dailyChange = document.querySelectorAll('.dailyChange');
+const coinLogos = document.querySelectorAll('coinLogo');
 
 for(let i = 0; i < 100; ++i){
     if(parseInt(dailyChange[i].innerText) < 0){
@@ -9,6 +10,7 @@ for(let i = 0; i < 100; ++i){
         price[i].style.color = "green"
     }
 }
+
 
 
 
