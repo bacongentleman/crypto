@@ -7,6 +7,8 @@ const methodOverride = require('method-override');
 //const fetch = require('fetch');
 const { default: axios } = require("axios");
 
+const commaNum = require('comma-number')
+
 app.use(exp.urlencoded({extended: true}));
 app.use(exp.json());
 app.use(exp.static(path.join(__dirname, '/statics')))
@@ -25,9 +27,13 @@ app.get('/', (req, res, next)=>{
     axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', header)
         .then(function(d){
             const apiData = d.data.data;
-            res.render('index', {data: apiData})
+            res.render('index', {data: apiData, commaNum:commaNum})
     })
     
+})
+
+app.get('/show/:id', (req, res)=>{
+    res.render('show.ejs')
 })
 
 

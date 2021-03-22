@@ -1,17 +1,48 @@
+
+
 <%- include('partials/head') %> 
 
 <body>
 
     <%- include ('partials/navbar') %> 
-<% for( let d of data ) { %>
-    <li><%= d.name %> </li>
-<% } %>
 
+  
+    
+    <table id = "mainTable" class="table table-striped table-hover bootstrapTable1">
+        <thead>
+            <tr> 
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Market Cap</th>
+                <th>Circulating Supply</th>
+            </tr>
+        </thead>
+
+  
+            <% for( let d of data ) { %>
+              <%   const priceUpdate = d.quote.USD.percent_change_24h; %> 
+                <tr class="tableRowsIndex"> 
+                    <td> <%= d.cmc_rank %> </td>
+                    <td> <a href="/show/<%=d.cmc_rank %>"> <b>  <%= d.name %> </b> <span class="nameTag"><%=d.symbol%></span> </a> </td>
+                    <td class="dailyChange" hidden> <%= d.quote.USD.percent_change_24h %> </td>
+                    <td class="price">  $<%= commaNum( d.quote.USD.price.toFixed(2) ) %> </td>
+                    <td> $<%= commaNum( d.quote.USD.market_cap.toFixed(2) ) %> </td>
+                    <td> $<%= commaNum( d.circulating_supply.toFixed(2) )%> </td>
+                </tr>
+            <% } %>
+        
+       
+        
+    </table>
+    
+ 
 
 
 
 
 
 <script src="/bootstrap/bootstrap.min.js"></script>
+<script src="/app.js"></script>
 </body>
 </html>

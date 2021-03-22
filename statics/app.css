@@ -1,0 +1,17 @@
+.nameTag{
+    color: grey;
+}
+
+a {
+text-decoration: none;
+color: black;
+}
+
+#navbar{
+    padding: 10px 0px;
+}
+
+#mainTable{
+    padding:100px;
+}
+
