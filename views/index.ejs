@@ -3,9 +3,23 @@
 <body>
 
     <%- include ('partials/navbar') %> 
-<% for( let d of data ) { %>
-    <li><%= d.name %> </li>
-<% } %>
+
+    <table class="table table-hover">
+
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Market Cap</th>
+                <th>Circulating Supply</th>
+            </tr>
+
+        </thead>
+        <% for( let d of data ) { %>
+            
+        <% } %>
+    </table>
 
 
 
