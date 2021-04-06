@@ -1,1 +1,1 @@
-# crypto
+Backend for a crypto webapp calling APIs from coinmarketcal.com and coinmarketcap.com to display top 100 current crypto coins and detailed information on each one. Backend is built using NodeJS and express. 
